@@ -1,11 +1,12 @@
 <div>
-  <div style="height:400px;width:800px">
+  <div *ngIf="data.length>0" style="height: 400px">
     <h4>Tracker</h4>
-    <ejs-treegrid [dataSource]="data" childMapping="districts" [allowSorting]="true" [sortSettings]="sortSetting"
+    <ejs-treegrid height='100%' width='100%' [treeColumnIndex]="0" enableCollapseAll="false" 
+    [dataSource]="data" childMapping="subtasks" [allowSorting]="true" [sortSettings]="sortSetting"
       [allowFiltering]="true">
     </ejs-treegrid>
   </div>
-  <section>
+  <section style="margin-top: 50px;">
     <h4>Symptoms</h4>
     <div class="row">
       <div class="col-sm-6">
