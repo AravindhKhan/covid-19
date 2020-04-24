@@ -10,7 +10,7 @@ import { TrackerService } from '../service/tracker.service';
   styleUrls: ['./tracker.component.css']
 })
 export class TrackerComponent implements OnInit {
-
+  showData:boolean = false;
   data:Object[] =[
     // {
     //   "states": "Tamil Nadu",
@@ -91,6 +91,7 @@ export class TrackerComponent implements OnInit {
        console.log('array',newArray)
        this.data = newArray
        console.log("in get request", this.data);
+       this.showData = true;
     }
      );
     //  setInterval(function(){ 
