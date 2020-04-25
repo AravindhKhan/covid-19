@@ -85,26 +85,9 @@ export class TrackerComponent implements OnInit {
     }
     this.trackerService.getTrackerdata().subscribe(
     datas => {
-      var newArray = [];
-      console.log('datas',datas);
-       newArray.push.apply(newArray, datas);
-       console.log('array',newArray)
-       this.data = newArray
-       console.log("in get request", this.data);
+      this.data = datas;
        this.showData = true;
     }
      );
-    //  setInterval(function(){ 
-    //   this.trackerService.getTrackerdata().subscribe(
-    //     datas => {
-    //       var newArray = [];
-    //       console.log('datas',datas);
-    //        newArray.push.apply(newArray, datas);
-    //        console.log('array',newArray)
-    //        this.data = newArray
-    //        console.log("in get request", this.data);
-    //     }
-    //      );
-    //   }, 3000);
   }
 }
